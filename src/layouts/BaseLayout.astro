@@ -1,0 +1,16 @@
+---
+import Head from '../components/base/Head.astro';
+
+const { title = 'Название сайта', description = 'Описание сайта' } =
+  Astro.props;
+---
+
+<html lang="ru" class="page">
+  <Head title={title} description={description} />
+
+  <body>
+    <div class="container">
+      <h1>Photo</h1>
+    </div>
+  </body>
+</html>

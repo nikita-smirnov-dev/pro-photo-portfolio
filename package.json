@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "pro-photo-portfolio",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.10"
+    "astro": "^6.1.10",
+    "sass": "^1.99.0"
   }
 }

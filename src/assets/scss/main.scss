@@ -1,2 +1,7 @@
 @use 'vars' as *;
+@use 'fonts' as *;
 @use 'settings' as *;
+
+@use './components/header' as *;
+@use './components/logo' as *;
+@use './components/nav' as *;

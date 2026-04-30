@@ -1,0 +1,25 @@
+---
+const navItems = [
+  { title: 'Commercial', href: '/commerce' },
+  { title: 'Model Tests', href: '/tests' },
+  { title: 'Editorial', href: '/editorial' },
+  { title: 'About', href: '/about' },
+  { title: 'Contact', href: 'mailto:hello@example.com' },
+];
+
+const { class: extraClass = '' } = Astro.props;
+---
+
+<nav class=`nav ${extraClass}`>
+  <ul class="nav__list list-reset">
+    {
+      navItems.map((item) => (
+        <li class="nav__item">
+          <a href={item.href} class="nav__link">
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

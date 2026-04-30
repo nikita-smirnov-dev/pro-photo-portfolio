@@ -1,0 +1,13 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-32);
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: var(--font-size-16);
+    line-height: 1;
+  }
+}

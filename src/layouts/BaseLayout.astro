@@ -1,5 +1,6 @@
 ---
 import Head from '../components/base/Head.astro';
+import Header from '../components/base/Header.astro';
 
 const { title = 'Название сайта', description = 'Описание сайта' } =
   Astro.props;
@@ -8,9 +9,8 @@ const { title = 'Название сайта', description = 'Описание �
 <html lang="ru" class="page">
   <Head title={title} description={description} />
 
-  <body>
-    <div class="container">
-      <h1>Photo</h1>
-    </div>
+  <body class="page">
+    <Header />
+    <div class="container"></div>
   </body>
 </html>

@@ -1,0 +1,13 @@
+.projects {
+  padding-top: calc(var(--header-height) + var(--spacing-32));
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  &__item {
+    width: 100%;
+  }
+}

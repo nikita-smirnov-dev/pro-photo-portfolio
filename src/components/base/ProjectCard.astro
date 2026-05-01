@@ -1,0 +1,11 @@
+---
+const { title, description, category } = Astro.props;
+---
+
+<div class="project-card">
+  <div class="project-card__inner">
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <p>{category}</p>
+  </div>
+</div>

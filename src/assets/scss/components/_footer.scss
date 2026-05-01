@@ -1,0 +1,15 @@
+.footer {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-40) 0;
+  }
+
+  &__text {
+    margin: 0;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--second-family);
+  }
+}

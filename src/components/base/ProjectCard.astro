@@ -1,11 +1,31 @@
 ---
-const { title, description, category } = Astro.props;
+import { Image } from 'astro:assets';
+import { projectCollections } from '../../data/images';
+import defaultImage from '../../assets/img/projects/no-photo.jpg';
+import type { Project } from '../../types/projectsTypes';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+
+const foundCover =
+  projectCollections[`/src/assets${project.coverImage}`]?.default;
+
+const cover = foundCover || defaultImage;
 ---
 
-<div class="project-card">
+<article class="project-card">
   <div class="project-card__inner">
-    <h2>{title}</h2>
-    <p>{description}</p>
-    <p>{category}</p>
+    <Image src={cover} alt={project.title} class="project-card__pic" />
+
+    <div class="project-card__content">
+      <a href="#" class="project-card__link">
+        <h2 class="project-card__title">{project.title}</h2>
+      </a>
+      <p class="project-card__descr">{project.description}</p>
+      <p class="project-card__category">{project.category}</p>
+    </div>
   </div>
-</div>
+</article>

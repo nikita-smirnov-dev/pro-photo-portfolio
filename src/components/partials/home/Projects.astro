@@ -1,16 +1,15 @@
 ---
-import { projects } from '../../../../data/projects';
+import { projects } from '../../../data/projects';
 import ProjectCard from '@components/base/ProjectCard.astro';
 ---
 
 <section class="projects section-offset">
   <div class="container projects__inner">
-    <!-- список проектов -->
     <ul class="list-reset projects__list">
       {
         projects.map((p) => (
           <li class="projects__item">
-            <ProjectCard {...p} />
+            <ProjectCard project={p} />
           </li>
         ))
       }

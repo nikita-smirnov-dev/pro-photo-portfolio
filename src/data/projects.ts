@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 'projects-1',
     title: 'Auto',
-    category: 'commercial',
+    category: 'commerce',
     description: 'faishon studio photo',
     coverImage: '/img/projects/project-1/cover-auto.jpg',
   },
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   {
     id: 'project-4',
     title: 'Moto',
-    category: 'commercial',
+    category: 'commerce',
     description: 'faishon studio photo',
     coverImage: '/img/projects/project-4/cover-moto.jpg',
   },

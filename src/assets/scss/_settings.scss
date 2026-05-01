@@ -45,10 +45,12 @@ img {
 }
 
 .page {
-  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
   margin: 0;
   min-width: 375px;
-  min-height: 100%;
+  min-height: 100vh;
+  font-family: var(--font-family);
   font-size: var(--font-size-16);
   color: var(--text-primary);
   background: var(--bg-primary);
@@ -62,4 +64,8 @@ img {
 
 .section-offset {
   padding-bottom: 80px;
+}
+
+.main {
+  flex: 1 0 auto;
 }

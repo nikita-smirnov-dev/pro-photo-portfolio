@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import { projectCollections } from '@data/images';
+import type { PhotoGallery } from '@appTypes/projectsTypes';
+import defaultImage from '@assets/img/projects/no-photo.jpg';
+
+interface Props {
+  project: PhotoGallery;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="project-gallery">
+  {
+    project.photos && project.photos.length > 0 ? (
+      project.photos.map((photoPath, idx) => {
+        const imageData =
+          projectCollections[`/src/assets${photoPath.src}`]?.default;
+
+        const defaultAlt = `${project.title} — фото ${idx + 1}`;
+
+        return (
+          <Image
+            src={imageData || defaultImage}
+            alt={photoPath.alt || defaultAlt}
+            class:list={[
+              'project-gallery__pic',
+              { 'project-gallery__pic--wide': photoPath.size === 'wide' },
+            ]}
+          />
+        );
+      })
+    ) : (
+      <p class="project-gallery__info">В этом проекте пока нет фотографий.</p>
+    )
+  }
+</article>

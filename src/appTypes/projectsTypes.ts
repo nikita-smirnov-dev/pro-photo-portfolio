@@ -1,0 +1,16 @@
+export interface ProjectPhoto {
+  src: string;
+  size?: 'standard' | 'wide';
+  alt?: string;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  category: 'commerce' | 'tests' | 'editorial';
+  description: string;
+  coverImage: string;
+  photos?: ProjectPhoto[];
+}
+
+export type PhotoGallery = Pick<Project, 'photos' | 'title'>;

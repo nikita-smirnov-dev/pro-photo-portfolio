@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import { projectCollections } from '../../data/images';
-import defaultImage from '../../assets/img/projects/no-photo.jpg';
-import type { Project } from '../../types/projectsTypes';
+import { projectCollections } from '@data/images';
+import defaultImage from '@assets/img/projects/no-photo.jpg';
+import type { Project } from '@appTypes/projectsTypes';
 
 interface Props {
   project: Project;
@@ -21,7 +21,7 @@ const cover = foundCover || defaultImage;
     <Image src={cover} alt={project.title} class="project-card__pic" />
 
     <div class="project-card__content">
-      <a href="#" class="project-card__link">
+      <a href={`/work/${project.id}`} class="project-card__link">
         <h2 class="project-card__title">{project.title}</h2>
       </a>
       <p class="project-card__descr">{project.description}</p>

@@ -1,35 +1,30 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
-import { projects } from '../../data/projects';
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+import Layout from '@layouts/BaseLayout.astro';
+import { projects } from '@data/projects';
 import ProjectCard from '@components/base/ProjectCard.astro';
 
-export function getStaticPaths() {
-  // return [
-  //   { params: { category: 'commerce' } },
-  //   { params: { category: 'tests' } },
-  //   { params: { category: 'editorial' } },
-
-  // ];
-
+export const getStaticPaths = (() => {
   const allCategories = [
     ...new Set(projects.map((p) => p.category.toLowerCase())),
   ];
 
-  console.log('--- МОИ КАТЕГОРИИ ---', allCategories);
-  const result = allCategories.map((cat) => ({
-    params: { category: cat },
-  }));
+  return allCategories.map((cat) => {
+    const filteredProjects = projects.filter(
+      (p) => p.category.toLowerCase() === cat,
+    );
 
-  console.log('--- МОИ КАТЕГОРИИ ---', result);
+    return {
+      params: { category: cat },
+      props: { filteredProjects },
+    };
+  });
+}) satisfies GetStaticPaths;
 
-  return result;
-}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { category } = Astro.params;
-
-const filterCategory = projects.filter((p) => {
-  return p.category.toLowerCase() === category;
-});
+const { filteredProjects } = Astro.props;
 ---
 
 <Layout title={category.charAt(0).toUpperCase() + category.slice(1)}>
@@ -38,7 +33,7 @@ const filterCategory = projects.filter((p) => {
       {
         (
           <ul class="list-reset projects__list">
-            {filterCategory.map((p) => (
+            {filteredProjects.map((p) => (
               <li class="projects__item">
                 <ProjectCard project={p} />
               </li>

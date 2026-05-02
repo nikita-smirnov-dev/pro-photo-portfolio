@@ -1,0 +1,40 @@
+---
+// import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+import Layout from '@layouts/BaseLayout.astro';
+import { projects } from '@data/projects';
+import ProjectGallery from '@components/base/ProjectGallery.astro';
+
+export function getStaticPaths() {
+  const allId = [...new Set(projects.map((p) => p.id.toLowerCase()))];
+
+  const result = allId.map((id) => ({
+    params: { id: id },
+  }));
+
+  return result;
+}
+
+const { id } = Astro.params;
+
+const filterId = projects.filter((p) => {
+  return p.id.toLowerCase() === id;
+});
+---
+
+<Layout title="project">
+  <section class="projects section-offset">
+    <div class="container projects-work__inner">
+      {
+        (
+          <ul class="list-reset projects-work__list">
+            {filterId.map((p) => (
+              <li class="projects-work__item">
+                <ProjectGallery project={p} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </section>
+</Layout>

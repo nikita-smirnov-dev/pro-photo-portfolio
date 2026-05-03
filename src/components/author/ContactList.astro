@@ -1,0 +1,11 @@
+---
+import { authorInfo } from '@data/author';
+import Social from '@components/base/Social.astro';
+---
+
+<section class="contact-list section-offset">
+  <div class="container contact-list__inner">
+    <h2 class="contact-list__title">Contact Me</h2>
+    <Social authorSocial={authorInfo} />
+  </div>
+</section>

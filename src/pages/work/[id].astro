@@ -2,7 +2,7 @@
 // import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import Layout from '@layouts/BaseLayout.astro';
 import { projects } from '@data/projects';
-import ProjectGallery from '@components/base/ProjectGallery.astro';
+import ProjectGallery from '@components/projects/ProjectGallery.astro';
 
 export function getStaticPaths() {
   const allId = [...new Set(projects.map((p) => p.id.toLowerCase()))];

@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { AuthorSocial } from '@appTypes/authorTypes';
+
+interface Props {
+  authorSocial: AuthorSocial;
+}
+
+const { authorSocial } = Astro.props;
+---
+
+<ul class="list-reset social">
+  {
+    authorSocial.links?.length ? (
+      authorSocial.links.map((link) => (
+        <li
+          class:list={[
+            'social__item',
+            { 'social__item--full': link.type === 'phone' },
+          ]}
+        >
+          <a
+            name={link.name}
+            class:list={['social__link', { 'social__link--text': !link.icon }]}
+            href={
+              link.type === 'phone'
+                ? `tel:${link.href.replace(/[^\d+]/g, '')}`
+                : link.type === 'email'
+                  ? `mailto:${link.href}`
+                  : link.href
+            }
+            aria-label={link.label}
+            title={link.label}
+          >
+            {link.icon ? (
+              <Icon name={link.icon} aria-hidden="true" />
+            ) : (
+              <span>{link.label}</span>
+            )}
+          </a>
+        </li>
+      ))
+    ) : (
+      <p class="social__info">Контакты скоро появятся</p>
+    )
+  }
+</ul>

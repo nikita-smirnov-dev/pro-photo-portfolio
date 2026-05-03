@@ -2,7 +2,7 @@
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import Layout from '@layouts/BaseLayout.astro';
 import { projects } from '@data/projects';
-import ProjectCard from '@components/base/ProjectCard.astro';
+import ProjectCard from '@components/projects/ProjectCard.astro';
 
 export const getStaticPaths = (() => {
   const allCategories = [

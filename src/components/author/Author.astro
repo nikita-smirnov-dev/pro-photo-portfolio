@@ -1,0 +1,17 @@
+---
+import type { Author } from '@appTypes/authorTypes';
+
+interface Props {
+  author: Author;
+}
+
+const { author } = Astro.props;
+---
+
+<section class="author section-offset">
+  <div class="container author__inner">
+    <span class="author__name">{author.name}</span>
+    <span class="author__role">{author.role}</span>
+    <p class="author__bio">{author.bio}</p>
+  </div>
+</section>

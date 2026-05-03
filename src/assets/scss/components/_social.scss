@@ -1,0 +1,44 @@
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-40);
+  justify-content: center;
+
+  &__item {
+    justify-self: center;
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #000;
+    background: #e1e1e1;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--text {
+      width: auto;
+      height: auto;
+      background: transparent;
+      color: #e1e1e1;
+      font-size: var(--font-size-18);
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.not-found {
+  padding-top: calc(var(--header-height) + var(--spacing-32));
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--spacing-50);
+  }
+
+  &__icon {
+    display: inline-flex;
+    width: 90px;
+    height: 90px;
+    fill: var(--text-primary);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 100;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: var(--font-size-20);
+  }
+}

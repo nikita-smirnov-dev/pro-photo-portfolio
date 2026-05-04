@@ -1,3 +1,5 @@
 import { getHeaderheight } from '../js/helpers/header-height';
 
-getHeaderheight();
+document.addEventListener('astro:page-load', () => {
+  getHeaderheight();
+});

@@ -1,8 +1,9 @@
 ---
 import Projects from '@components/projects/Projects.astro';
+import { authorInfo } from '@data/author';
 import Layout from '@layouts/BaseLayout.astro';
 ---
 
-<Layout title="Юлия Дубровина - фотограф / Julia Dubrovina - Photograph">
+<Layout title=`Юлия Дубровина - фотограф / ${authorInfo.name} - Photograph`>
   <Projects />
 </Layout>

@@ -44,7 +44,7 @@ img {
   }
 }
 
-.page {
+.page__body {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -64,6 +64,18 @@ img {
 
 .section-offset {
   padding-bottom: 80px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .main {

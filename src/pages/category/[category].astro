@@ -2,6 +2,7 @@
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import Layout from '@layouts/BaseLayout.astro';
 import { projects } from '@data/projects';
+import { authorInfo } from '@data/author';
 import ProjectCard from '@components/projects/ProjectCard.astro';
 
 export const getStaticPaths = (() => {
@@ -25,11 +26,15 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { category } = Astro.params;
 const { filteredProjects } = Astro.props;
+const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
 ---
 
-<Layout title={category.charAt(0).toUpperCase() + category.slice(1)}>
+<Layout title={`${categoryName} - ${authorInfo.name}`}>
   <section class="projects section-offset">
     <div class="container projects__inner">
+      <h1 class="visually-hidden">
+        {categoryName} — Портфолио фотографа {authorInfo.name}
+      </h1>
       {
         (
           <ul class="list-reset projects__list">

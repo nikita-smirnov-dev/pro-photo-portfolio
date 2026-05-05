@@ -1,8 +1,9 @@
 ---
 import Layout from '@layouts/BaseLayout.astro';
 import ContactList from '@components/author/ContactList.astro';
+import { authorInfo } from '@data/author';
 ---
 
-<Layout>
+<Layout title=`Contact - ${authorInfo.name}`>
   <ContactList />
 </Layout>

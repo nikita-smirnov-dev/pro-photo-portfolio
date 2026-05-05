@@ -4,6 +4,6 @@ import Author from '@components/author/Author.astro';
 import Layout from '@layouts/BaseLayout.astro';
 ---
 
-<Layout>
+<Layout title=`About - ${authorInfo.name}`>
   <Author author={authorInfo} />
 </Layout>

@@ -24,6 +24,9 @@ const { project } = Astro.props;
           <Image
             src={imageData || defaultImage}
             alt={photoPath.alt || defaultAlt}
+            width={1600}
+            loading="eager"
+            decoding="sync"
             class:list={[
               'project-gallery__pic',
               { 'project-gallery__pic--wide': photoPath.size === 'wide' },

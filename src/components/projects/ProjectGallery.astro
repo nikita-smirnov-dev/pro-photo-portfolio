@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { projectCollections } from '@data/images';
 import type { PhotoGallery } from '@appTypes/projectsTypes';
 import defaultImage from '@assets/img/projects/no-photo.jpg';
@@ -14,24 +14,35 @@ const { project } = Astro.props;
 <article class="project-gallery">
   {
     project.photos && project.photos.length > 0 ? (
-      project.photos.map((photoPath, idx) => {
+      project.photos.map(async (photoPath, idx) => {
         const imageData =
           projectCollections[`/src/assets${photoPath.src}`]?.default;
+
+        if (!imageData) return null;
+
+        const optimizedLargeImg = await getImage({
+          src: imageData,
+          width: 2000,
+          format: 'webp',
+        });
 
         const defaultAlt = `${project.title} — фото ${idx + 1}`;
 
         return (
-          <Image
-            src={imageData || defaultImage}
-            alt={photoPath.alt || defaultAlt}
-            width={1600}
-            loading="eager"
-            decoding="sync"
-            class:list={[
-              'project-gallery__pic',
-              { 'project-gallery__pic--wide': photoPath.size === 'wide' },
-            ]}
-          />
+          <a href={optimizedLargeImg.src} data-fancybox="gallery">
+            <Image
+              src={imageData || defaultImage}
+              alt={photoPath.alt || defaultAlt}
+              width={705}
+              height={705}
+              loading={idx < 4 ? 'eager' : 'lazy'}
+              decoding={idx < 4 ? 'sync' : 'async'}
+              class:list={[
+                'project-gallery__pic',
+                { 'project-gallery__pic--wide': photoPath.size === 'wide' },
+              ]}
+            />
+          </a>
         );
       })
     ) : (

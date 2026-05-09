@@ -1,3 +1,5 @@
+@use '../mixins/disable-mob-hover' as *;
+
 .nav {
   &__list {
     display: flex;
@@ -6,8 +8,36 @@
   }
 
   &__link {
+    position: relative;
+    display: inline-flex;
     font-weight: 400;
     font-size: var(--font-size-16);
     line-height: 1;
+    color: var(--text-primary);
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background: var(--accent-color);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @include hover {
+      &::after {
+        transform: scaleX(1);
+        transform-origin: center;
+      }
+    }
+
+    &:active {
+      color: var(--accent-color);
+    }
   }
 }

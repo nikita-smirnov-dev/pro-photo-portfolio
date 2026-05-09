@@ -9,5 +9,10 @@
 
   &__item {
     width: 100%;
+
+    &:focus-visible {
+      outline: 2px solid #2d2926;
+      outline-offset: 3px;
+    }
   }
 }

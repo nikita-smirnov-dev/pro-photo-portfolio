@@ -78,6 +78,11 @@ img {
   border: 0;
 }
 
+:focus-visible {
+  outline: 2px solid #2d2926;
+  outline-offset: 3px;
+}
+
 .main {
   flex: 1 0 auto;
 }

@@ -23,6 +23,9 @@ const cover = foundCover || defaultImage;
       alt={project.title}
       class="project-card__pic"
       width={1600}
+      loading="eager"
+      decoding="sync"
+      fetchpriority="high"
     />
 
     <div class="project-card__content">

@@ -1,7 +1,7 @@
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-20);
+  gap: var(--spacing-10);
   margin: var(--spacing-20) var(--spacing-40);
 
   &__pic {

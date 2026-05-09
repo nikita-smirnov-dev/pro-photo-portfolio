@@ -2,6 +2,8 @@
 @use 'fonts' as *;
 @use 'settings' as *;
 
+@use '@fancyapps/ui/dist/fancybox/fancybox.css';
+
 @use './components/header' as *;
 @use './components/footer' as *;
 @use './components/logo' as *;

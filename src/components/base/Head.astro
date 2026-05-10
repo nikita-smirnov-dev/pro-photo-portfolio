@@ -15,7 +15,7 @@ const { title = 'Заголовок сайта', description = '' } = Astro.prop
 
   {description && <meta name="description" content={description} />}
 
-  <ClientRouter />
+  <ClientRouter fallback="animate" />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   <script>

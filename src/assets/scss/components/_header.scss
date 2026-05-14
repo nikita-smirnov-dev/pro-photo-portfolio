@@ -1,3 +1,5 @@
+@use '../mixins/breakpoint.scss' as *;
+
 .header {
   position: fixed;
   top: 0;
@@ -12,9 +14,51 @@
   &__inner {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   &__logo {
     margin-right: auto;
+  }
+
+  &__nav {
+    @include desktop {
+      position: absolute;
+      top: calc(var(--header-height) - 40px);
+      left: 0;
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      padding: var(--spacing-20) var(--spacing-40);
+      z-index: 100;
+      background-color: var(--bg-primary);
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+      transform: translateY(-100%);
+      clip-path: inset(100% 0 0 0);
+      transition:
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        clip-path 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+      .nav__list {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      .nav__item {
+        width: 100%;
+      }
+
+      .nav__link {
+        display: inline-flex;
+        width: 100%;
+      }
+
+      &.header__nav--visible {
+        transform: translateY(0);
+        clip-path: inset(0 0 -30px 0);
+      }
+    }
   }
 }

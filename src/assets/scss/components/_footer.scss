@@ -1,3 +1,5 @@
+@use '../mixins/breakpoint.scss' as *;
+
 .footer {
   flex: 0 0 auto;
 
@@ -6,6 +8,10 @@
     align-items: center;
     justify-content: center;
     padding: var(--spacing-40) 0;
+
+    @include mobile {
+      padding: var(--spacing-20) 0;
+    }
   }
 
   &__text {
@@ -14,5 +20,9 @@
     text-align: center;
     text-transform: uppercase;
     font-family: var(--second-family);
+
+    @include mobile {
+      font-size: var(--font-size-16);
+    }
   }
 }

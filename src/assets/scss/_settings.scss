@@ -1,3 +1,5 @@
+@use './mixins/breakpoint.scss' as *;
+
 *,
 *::before,
 *::after {
@@ -69,6 +71,10 @@ img {
 
 .section-offset {
   padding-bottom: 80px;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
 }
 
 .visually-hidden {

@@ -9,44 +9,72 @@ interface Props {
 }
 
 const { project } = Astro.props;
+
+const validPhotos =
+  project.photos && project.photos.length > 0
+    ? await Promise.all(
+        project.photos.map(async (photoPath, idx) => {
+          const imageData =
+            projectCollections[`/src/assets${photoPath.src}`]?.default;
+
+          if (!imageData) return null;
+
+          const optimizedLargeImg = await getImage({
+            src: imageData,
+            width: 2000,
+            format: 'webp',
+          });
+
+          const defaultAlt = `${project.title} — фото ${idx + 1}`;
+
+          return {
+            id: `${photoPath.src}-${idx}`,
+            imageData,
+            largeSrc: optimizedLargeImg.src,
+            alt: photoPath.alt || defaultAlt,
+            size: photoPath.size,
+            loading: idx < 4 ? ('eager' as const) : ('lazy' as const),
+            decoding: idx < 4 ? ('sync' as const) : ('async' as const),
+          };
+        }),
+      )
+    : [];
+
+const photosToRender = validPhotos.filter(
+  (photo): photo is NonNullable<typeof photo> => !!photo,
+);
 ---
 
-<article class="project-gallery">
-  {
-    project.photos && project.photos.length > 0 ? (
-      project.photos.map(async (photoPath, idx) => {
-        const imageData =
-          projectCollections[`/src/assets${photoPath.src}`]?.default;
-
-        if (!imageData) return null;
-
-        const optimizedLargeImg = await getImage({
-          src: imageData,
-          width: 2000,
-          format: 'webp',
-        });
-
-        const defaultAlt = `${project.title} — фото ${idx + 1}`;
-
-        return (
-          <a href={optimizedLargeImg.src} data-fancybox="gallery">
-            <Image
-              src={imageData || defaultImage}
-              alt={photoPath.alt || defaultAlt}
-              width={705}
-              height={705}
-              loading={idx < 4 ? 'eager' : 'lazy'}
-              decoding={idx < 4 ? 'sync' : 'async'}
-              class:list={[
-                'project-gallery__pic',
-                { 'project-gallery__pic--wide': photoPath.size === 'wide' },
-              ]}
-            />
-          </a>
-        );
-      })
-    ) : (
-      <p class="project-gallery__info">В этом проекте пока нет фотографий.</p>
-    )
-  }
-</article>
+{
+  photosToRender.length > 0 ? (
+    photosToRender.map((photo) => (
+      <li
+        class:list={[
+          'project-gallery__item',
+          {
+            'project-gallery__item--wide': photo.size === 'wide',
+            'project-gallery__item--full': photo.size === 'full',
+          },
+        ]}
+      >
+        <a
+          href={photo.largeSrc}
+          class="project-gallery__link"
+          data-fancybox="gallery"
+        >
+          <Image
+            src={photo.imageData || defaultImage}
+            alt={photo.alt}
+            width={500}
+            height={750}
+            loading={photo.loading}
+            decoding={photo.decoding}
+            class="project-gallery__pic"
+          />
+        </a>
+      </li>
+    ))
+  ) : (
+    <p class="project-gallery__info">В этом проекте пока нет фотографий.</p>
+  )
+}

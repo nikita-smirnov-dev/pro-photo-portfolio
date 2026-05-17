@@ -1,6 +1,6 @@
 export interface ProjectPhoto {
   src: string;
-  size?: 'standard' | 'wide';
+  size?: 'standard' | 'wide' | 'full';
   alt?: string;
 }
 

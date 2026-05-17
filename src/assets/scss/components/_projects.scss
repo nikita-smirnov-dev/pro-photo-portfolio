@@ -1,3 +1,5 @@
+@use '../mixins/breakpoint.scss' as *;
+
 .projects {
   padding-top: calc(var(--header-height) + var(--spacing-32));
 
@@ -5,6 +7,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-14);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {

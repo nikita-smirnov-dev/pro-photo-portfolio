@@ -1,3 +1,5 @@
+@use '../mixins/breakpoint.scss' as *;
+
 .contact-list {
   display: flex;
   align-items: center;
@@ -7,8 +9,14 @@
   &__title {
     margin: 0;
     margin-bottom: var(--spacing-60);
+    text-align: center;
     letter-spacing: 0.1em;
     font-weight: 100;
     font-size: var(--font-size-48);
+
+    @include mobile {
+      margin-bottom: var(--spacing-40);
+      font-size: var(--font-size-24);
+    }
   }
 }

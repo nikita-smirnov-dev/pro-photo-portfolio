@@ -1,5 +1,11 @@
+@use '../mixins/breakpoint.scss' as *;
+
 .logo {
   font-family: var(--second-family);
   font-size: var(--font-size-24);
   letter-spacing: 0.1em;
+
+  @include mobile {
+    font-size: var(--font-size-20);
+  }
 }

@@ -16,30 +16,20 @@ export function getStaticPaths() {
 
 const { id } = Astro.params;
 
-const filterId = projects.filter((p) => {
-  return p.id.toLowerCase() === id;
-});
+const currentProject = projects.find((p) => p.id.toLowerCase() === id);
 
 const nameProject = id.charAt(0).toUpperCase() + id.slice(1);
 ---
 
 <Layout title={`${nameProject} - ${authorInfo.name}`}>
-  <section class="projects section-offset">
+  <section class="projects-work section-offset">
     <div class="container projects-work__inner">
-      <h1 class="visually-hidden">
+      <h1 class="projects-work__title visually-hidden">
         {nameProject} — фотограф {authorInfo.name}
       </h1>
-      {
-        (
-          <ul class="list-reset projects-work__list">
-            {filterId.map((p) => (
-              <li class="projects-work__item">
-                <ProjectGallery project={p} />
-              </li>
-            ))}
-          </ul>
-        )
-      }
+      <ul class="projects-work__list list-reset">
+        {currentProject && <ProjectGallery project={currentProject} />}
+      </ul>
     </div>
   </section>
 </Layout>

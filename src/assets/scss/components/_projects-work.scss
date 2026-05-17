@@ -1,0 +1,25 @@
+@use '../mixins/breakpoint.scss' as *;
+
+.projects-work {
+  padding-top: calc(var(--header-height) + var(--spacing-32));
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-10);
+    margin: var(--spacing-20) var(--spacing-40);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-count: 2;
+    }
+
+    @include small-tablet {
+      margin: 0;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

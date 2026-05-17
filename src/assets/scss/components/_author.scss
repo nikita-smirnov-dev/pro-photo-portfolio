@@ -1,3 +1,5 @@
+@use '../mixins/breakpoint.scss' as *;
+
 .author {
   padding-top: calc(var(--header-height) + var(--spacing-32));
 
@@ -9,6 +11,15 @@
     gap: var(--spacing-40);
     width: 50%;
     margin: var(--spacing-20) var(--spacing-40);
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      gap: var(--spacing-20);
+      margin: var(--spacing-20) 0;
+    }
   }
 
   &__name {

@@ -52,27 +52,100 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'project-3',
-    title: 'Animals',
-    category: 'editorial',
+    id: 'rhythm-pattern',
+    title: 'Rhythm & Pattern',
+    category: 'architecture',
     description: 'faishon studio photo',
-    coverImage: '/img/projects/project-3/cover-animals.jpg',
+    coverImage:
+      '/img/projects/architecture/rhythm-pattern/rhythm-pattern-cover.jpg',
     photos: [
       {
-        src: '/img/projects/project-3/photo-animals-1.jpg',
+        src: '/img/projects/architecture/rhythm-pattern/rhythm-pattern-01.jpg',
+      },
+      {
+        src: '/img/projects/architecture/rhythm-pattern/rhythm-pattern-02.jpg',
+      },
+      {
+        src: '/img/projects/architecture/rhythm-pattern/rhythm-pattern-03.jpg',
+      },
+      {
+        src: '/img/projects/architecture/rhythm-pattern/rhythm-pattern-04.jpg',
+        size: 'wide',
+      },
+      {
+        src: '/img/projects/architecture/rhythm-pattern/rhythm-pattern-05.jpg',
+        size: 'wide',
+      },
+    ],
+  },
+  {
+    id: 'italian-soul',
+    title: 'Italian soul',
+    category: 'automotive',
+    description: 'faishon studio photo',
+    coverImage: '/img/projects/automotive/italian-soul/italian-soul-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/automotive/italian-soul/italian-soul-01.jpg',
       },
 
       {
-        src: '/img/projects/project-3/photo-animals-2.jpg',
+        src: '/img/projects/automotive/italian-soul/italian-soul-02.jpg',
       },
 
       {
-        src: '/img/projects/project-3/photo-animals-3.jpg',
+        src: '/img/projects/automotive/italian-soul/italian-soul-03.jpg',
       },
 
       {
-        src: '/img/projects/project-3/photo-animals-4.jpg',
+        src: '/img/projects/automotive/italian-soul/italian-soul-04.jpg',
+      },
+    ],
+  },
+  {
+    id: 'raw-horsepower',
+    title: 'Raw horsepower',
+    category: 'automotive',
+    description: 'faishon studio photo',
+    coverImage:
+      '/img/projects/automotive/raw-horsepower/raw-horsepower-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/automotive/raw-horsepower/raw-horsepower-01.jpg',
+      },
+
+      {
+        src: '/img/projects/automotive/raw-horsepower/raw-horsepower-02.jpg',
+      },
+
+      {
+        src: '/img/projects/automotive/raw-horsepower/raw-horsepower-03.jpg',
+      },
+
+      {
+        src: '/img/projects/automotive/raw-horsepower/raw-horsepower-04.jpg',
         size: 'full',
+      },
+    ],
+  },
+  {
+    id: 'stuttgart-lines',
+    title: 'Stuttgart lines',
+    category: 'automotive',
+    description: 'faishon studio photo',
+    coverImage:
+      '/img/projects/automotive/stuttgart-lines/stuttgart-lines-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/automotive/stuttgart-lines/stuttgart-lines-01.jpg',
+      },
+
+      {
+        src: '/img/projects/automotive/stuttgart-lines/stuttgart-lines-02.jpg',
+      },
+
+      {
+        src: '/img/projects/automotive/stuttgart-lines/stuttgart-lines-03.jpg',
       },
     ],
   },

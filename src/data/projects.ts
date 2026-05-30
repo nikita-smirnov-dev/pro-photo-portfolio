@@ -2,62 +2,51 @@ import type { Project } from '@appTypes/projectsTypes';
 
 export const projects: Project[] = [
   {
-    id: 'alexa',
-    title: 'Alexa',
-    category: 'persons',
+    id: 'form-texture',
+    title: 'Form & Texture',
+    category: 'architecture',
     description: 'faishon studio photo',
-    coverImage: '/img/projects/alexa/alexa-cover.jpg',
+    coverImage:
+      '/img/projects/architecture/form-texture/form-texture-cover.jpg',
     photos: [
       {
-        src: '/img/projects/alexa/alexa-01.jpg',
+        src: '/img/projects/architecture/form-texture/form-texture-01.jpg',
       },
       {
-        src: '/img/projects/alexa/alexa-02.jpg',
+        src: '/img/projects/architecture/form-texture/form-texture-02.jpg',
       },
       {
-        src: '/img/projects/alexa/alexa-04.jpg',
+        src: '/img/projects/architecture/form-texture/form-texture-04.jpg',
       },
       {
-        src: '/img/projects/alexa/alexa-05.jpg',
-        size: 'wide',
-      },
-      {
-        src: '/img/projects/alexa/alexa-07.jpg',
+        src: '/img/projects/architecture/form-texture/form-texture-05.jpg',
         size: 'wide',
       },
     ],
   },
   {
-    id: 'victoria',
-    title: 'Victoria',
-    category: 'persons',
+    id: 'lines-curves',
+    title: 'Lines & Curves',
+    category: 'architecture',
     description: 'faishon studio photo',
-    coverImage: '/img/projects/victoria/victoria-cover.jpg',
+    coverImage:
+      '/img/projects/architecture/lines-curves/lines-curves-cover.jpg',
     photos: [
       {
-        src: '/img/projects/victoria/victoria-06.jpg',
+        src: '/img/projects/architecture/lines-curves/lines-curves-01.jpg',
       },
       {
-        src: '/img/projects/victoria/victoria-09.jpg',
+        src: '/img/projects/architecture/lines-curves/lines-curves-02.jpg',
       },
       {
-        src: '/img/projects/victoria/victoria-10.jpg',
+        src: '/img/projects/architecture/lines-curves/lines-curves-03.jpg',
       },
       {
-        src: '/img/projects/victoria/victoria-13.jpg',
-      },
-      {
-        src: '/img/projects/victoria/victoria-14.jpg',
-      },
-      {
-        src: '/img/projects/victoria/victoria-15.jpg',
-      },
-      {
-        src: '/img/projects/victoria/victoria-17.jpg',
+        src: '/img/projects/architecture/lines-curves/lines-curves-04.jpg',
         size: 'wide',
       },
       {
-        src: '/img/projects/victoria/victoria-19.jpg',
+        src: '/img/projects/architecture/lines-curves/lines-curves-05.jpg',
         size: 'wide',
       },
     ],

@@ -2,6 +2,7 @@
 @use '../mixins/breakpoint.scss' as *;
 
 .project-card {
+  -webkit-tap-highlight-color: transparent;
   &__inner {
     position: relative;
     width: 100%;
@@ -77,6 +78,7 @@
     align-items: center;
     justify-content: center;
     color: var(--text-secondary);
+    -webkit-tap-highlight-color: transparent;
 
     &:focus-visible {
       outline: none;

@@ -1,3 +1,5 @@
+@use '../mixins/disable-mob-hover' as *;
+
 .not-found {
   padding-top: calc(var(--header-height) + var(--spacing-32));
 
@@ -24,5 +26,27 @@
   &__descr {
     margin: 0;
     font-size: var(--font-size-20);
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-10) var(--spacing-30);
+    color: var(--black-color);
+    background: #e1e1e1;
+    transition:
+      background 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    @include hover {
+      color: #e1e1e1;
+      background: var(--black-color);
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }

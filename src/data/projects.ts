@@ -362,4 +362,81 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 'vessel-geometry',
+    title: 'Vessel geometry',
+    category: 'architecture',
+    coverImage:
+      '/img/projects/architecture/vessel-geometry/vessel-geometry-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/architecture/vessel-geometry/vessel-geometry-01.jpg',
+      },
+      {
+        src: '/img/projects/architecture/vessel-geometry/vessel-geometry-02.jpg',
+      },
+      {
+        src: '/img/projects/architecture/vessel-geometry/vessel-geometry-03.jpg',
+      },
+      {
+        src: '/img/projects/architecture/vessel-geometry/vessel-geometry-04.jpg',
+      },
+      {
+        src: '/img/projects/architecture/vessel-geometry/vessel-geometry-05.jpg',
+      },
+      {
+        src: '/img/projects/architecture/vessel-geometry/vessel-geometry-06.jpg',
+      },
+    ],
+  },
+  {
+    id: 'airbus',
+    title: 'Airbus A320',
+    category: 'automotive',
+    coverImage: '/img/projects/automotive/airbus/airbus-a320-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/automotive/airbus/airbus-a320-01.jpg',
+      },
+      {
+        src: '/img/projects/automotive/airbus/airbus-a320-02.jpg',
+      },
+      {
+        src: '/img/projects/automotive/airbus/airbus-a320-03.jpg',
+      },
+      {
+        src: '/img/projects/automotive/airbus/airbus-a320-04.jpg',
+        size: 'wide',
+      },
+      {
+        src: '/img/projects/automotive/airbus/airbus-a320-05.jpg',
+        size: 'wide',
+      },
+    ],
+  },
+  {
+    id: 'spot-system',
+    title: 'Spot system',
+    category: 'automotive',
+    coverImage: '/img/projects/automotive/spot-system/spot-system-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/automotive/spot-system/spot-system-01.jpg',
+      },
+      {
+        src: '/img/projects/automotive/spot-system/spot-system-02.jpg',
+      },
+      {
+        src: '/img/projects/automotive/spot-system/spot-system-03.jpg',
+      },
+      {
+        src: '/img/projects/automotive/spot-system/spot-system-04.jpg',
+        size: 'wide',
+      },
+      {
+        src: '/img/projects/automotive/spot-system/spot-system-05.jpg',
+        size: 'wide',
+      },
+    ],
+  },
 ];

@@ -5,7 +5,6 @@ export const projects: Project[] = [
     id: 'form-texture',
     title: 'Form & Texture',
     category: 'architecture',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/architecture/form-texture/form-texture-cover.jpg',
     photos: [
@@ -28,7 +27,6 @@ export const projects: Project[] = [
     id: 'lines-curves',
     title: 'Lines & Curves',
     category: 'architecture',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/architecture/lines-curves/lines-curves-cover.jpg',
     photos: [
@@ -55,7 +53,6 @@ export const projects: Project[] = [
     id: 'rhythm-pattern',
     title: 'Rhythm & Pattern',
     category: 'architecture',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/architecture/rhythm-pattern/rhythm-pattern-cover.jpg',
     photos: [
@@ -82,7 +79,6 @@ export const projects: Project[] = [
     id: 'italian-soul',
     title: 'Italian soul',
     category: 'automotive',
-    description: 'faishon studio photo',
     coverImage: '/img/projects/automotive/italian-soul/italian-soul-cover.jpg',
     photos: [
       {
@@ -106,7 +102,6 @@ export const projects: Project[] = [
     id: 'raw-horsepower',
     title: 'Raw horsepower',
     category: 'automotive',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/automotive/raw-horsepower/raw-horsepower-cover.jpg',
     photos: [
@@ -132,7 +127,6 @@ export const projects: Project[] = [
     id: 'stuttgart-lines',
     title: 'Stuttgart lines',
     category: 'automotive',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/automotive/stuttgart-lines/stuttgart-lines-cover.jpg',
     photos: [
@@ -153,7 +147,6 @@ export const projects: Project[] = [
     id: 'interior-geometry',
     title: 'Interior & Geometry',
     category: 'interios',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/interios/interior-geometry/interior-geometry-cover.jpg',
     photos: [
@@ -189,7 +182,6 @@ export const projects: Project[] = [
     id: 'minimalist-living',
     title: 'Minimalist living',
     category: 'interios',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/interios/minimalist-living/minimalist-living-cover.jpg',
     photos: [
@@ -211,7 +203,6 @@ export const projects: Project[] = [
     id: 'glacier-landscape',
     title: 'Glacier landscape',
     category: 'nature',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/nature/glacier-landscape/glacier-landscape-cover.jpg',
     photos: [
@@ -230,7 +221,6 @@ export const projects: Project[] = [
     id: 'night-sky',
     title: 'Night sky',
     category: 'nature',
-    description: 'faishon studio photo',
     coverImage: '/img/projects/nature/night-sky/night-sky-cover.jpg',
     photos: [
       {
@@ -257,7 +247,6 @@ export const projects: Project[] = [
     id: 'storm-clouds',
     title: 'Storm clouds',
     category: 'nature',
-    description: 'faishon studio photo',
     coverImage: '/img/projects/nature/storm-clouds/storm-clouds-cover.jpg',
     photos: [
       {
@@ -284,7 +273,6 @@ export const projects: Project[] = [
     id: 'industrial-factory',
     title: 'Industrial factory',
     category: 'objects',
-    description: 'faishon studio photo',
     coverImage:
       '/img/projects/objects/industrial-factory/industrial-factory-cover.jpg',
     photos: [
@@ -311,7 +299,6 @@ export const projects: Project[] = [
     id: 'radio-tower',
     title: 'Radio tower',
     category: 'objects',
-    description: 'faishon studio photo',
     coverImage: '/img/projects/objects/radio-tower/radio-tower-cover.jpg',
     photos: [
       {
@@ -333,7 +320,6 @@ export const projects: Project[] = [
     id: 'satellite-dish',
     title: 'Satellite dish',
     category: 'objects',
-    description: 'faishon studio photo',
     coverImage: '/img/projects/objects/satellite-dish/satellite-dish-cover.jpg',
     photos: [
       {
@@ -355,7 +341,6 @@ export const projects: Project[] = [
     id: 'wind-turbine',
     title: 'Wind turbine',
     category: 'objects',
-    description: 'faishon studio photo',
     coverImage: '/img/projects/objects/wind-turbine/wind-turbine-cover.jpg',
     photos: [
       {

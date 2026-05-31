@@ -10,7 +10,7 @@ export interface Author {
   name: string;
   city: string;
   role: string;
-  bio: string;
+  description: string;
   links: SocialItem[];
 }
 

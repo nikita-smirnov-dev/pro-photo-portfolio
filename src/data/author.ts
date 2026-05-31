@@ -1,10 +1,11 @@
 import type { Author } from '@appTypes/authorTypes';
 
 export const authorInfo: Author = {
-  name: 'Julia Dubrovina',
+  name: 'Raw Form Studio',
   city: 'Saint Petersburg',
-  role: 'Fashion & Commercial Photographer',
-  bio: 'Julia Dubrovina is a fashion and commercial photographer based in Saint Petersburg. Focusing on minimalist aesthetics and studio lighting, she works with modeling agencies and local brands to create clean, high-end visual content.',
+  role: 'Creative Visual Studio',
+  description:
+    'Raw Form Studio is an independent visual archive focused on architecture, objects, automotive and environmental photography. The studio explores geometry, atmosphere, textures and modern environments through minimal and cinematic visual storytelling.',
   links: [
     {
       name: 'phone',
@@ -15,22 +16,22 @@ export const authorInfo: Author = {
     {
       name: 'email',
       icon: 'email',
-      href: 'dubrovina.photo@example.com',
-      label: 'dubrovina.photo@example.com',
+      href: 'mailto@rawformstudio.com',
+      label: 'hello@rawformstudio.com',
       type: 'email',
     },
     {
       name: 'vk',
       icon: 'vk',
-      href: 'https://vk.com',
-      label: 'vk/j_dubrovina',
+      href: 'https://vk.com/rawformstudio',
+      label: 'vk.com/rawformstudio',
       type: 'link',
     },
     {
       name: 'tg',
       icon: 'tg',
-      href: 'https://t.me',
-      label: 't.me/j_dubrovina',
+      href: 'https://t.me/rawformstudio',
+      label: 't.me/rawformstudio',
       type: 'link',
     },
   ],

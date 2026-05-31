@@ -8,7 +8,7 @@ export interface Project {
   id: string;
   title: string;
   category: 'architecture' | 'automotive' | 'interios' | 'nature' | 'objects';
-  description: string;
+  description?: string;
   coverImage: string;
   photos?: ProjectPhoto[];
 }

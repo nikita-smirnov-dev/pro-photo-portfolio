@@ -280,4 +280,101 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 'industrial-factory',
+    title: 'Industrial factory',
+    category: 'objects',
+    description: 'faishon studio photo',
+    coverImage:
+      '/img/projects/objects/industrial-factory/industrial-factory-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/objects/industrial-factory/industrial-factory-01.jpg',
+      },
+      {
+        src: '/img/projects/objects/industrial-factory/industrial-factory-02.jpg',
+      },
+      {
+        src: '/img/projects/objects/industrial-factory/industrial-factory-03.jpg',
+      },
+      {
+        src: '/img/projects/objects/industrial-factory/industrial-factory-04.jpg',
+        size: 'wide',
+      },
+      {
+        src: '/img/projects/objects/industrial-factory/industrial-factory-05.jpg',
+        size: 'wide',
+      },
+    ],
+  },
+  {
+    id: 'radio-tower',
+    title: 'Radio tower',
+    category: 'objects',
+    description: 'faishon studio photo',
+    coverImage: '/img/projects/objects/radio-tower/radio-tower-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/objects/radio-tower/radio-tower-01.jpg',
+      },
+      {
+        src: '/img/projects/objects/radio-tower/radio-tower-02.jpg',
+      },
+      {
+        src: '/img/projects/objects/radio-tower/radio-tower-03.jpg',
+      },
+      {
+        src: '/img/projects/objects/radio-tower/radio-tower-04.jpg',
+        size: 'full',
+      },
+    ],
+  },
+  {
+    id: 'satellite-dish',
+    title: 'Satellite dish',
+    category: 'objects',
+    description: 'faishon studio photo',
+    coverImage: '/img/projects/objects/satellite-dish/satellite-dish-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/objects/satellite-dish/satellite-dish-01.jpg',
+      },
+      {
+        src: '/img/projects/objects/satellite-dish/satellite-dish-02.jpg',
+      },
+      {
+        src: '/img/projects/objects/satellite-dish/satellite-dish-03.jpg',
+      },
+      {
+        src: '/img/projects/objects/satellite-dish/satellite-dish-04.jpg',
+        size: 'full',
+      },
+    ],
+  },
+  {
+    id: 'wind-turbine',
+    title: 'Wind turbine',
+    category: 'objects',
+    description: 'faishon studio photo',
+    coverImage: '/img/projects/objects/wind-turbine/wind-turbine-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/objects/wind-turbine/wind-turbine-01.jpg',
+      },
+      {
+        src: '/img/projects/objects/wind-turbine/wind-turbine-02.jpg',
+      },
+      {
+        src: '/img/projects/objects/wind-turbine/wind-turbine-03.jpg',
+      },
+      {
+        src: '/img/projects/objects/wind-turbine/wind-turbine-04.jpg',
+        size: 'wide',
+      },
+      {
+        src: '/img/projects/objects/wind-turbine/wind-turbine-05.jpg',
+        size: 'wide',
+      },
+    ],
+  },
 ];

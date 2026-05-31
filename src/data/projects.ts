@@ -150,19 +150,60 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'project-4',
-    title: 'Moto',
-    category: 'commerce',
+    id: 'interior-geometry',
+    title: 'Interior & Geometry',
+    category: 'interios',
     description: 'faishon studio photo',
-    coverImage: '/img/projects/project-4/cover-moto.jpg',
+    coverImage:
+      '/img/projects/interios/interior-geometry/interior-geometry-cover.jpg',
     photos: [
       {
-        src: '/img/projects/project-4/photo-moto-1.jpg',
+        src: '/img/projects/interios/interior-geometry/interior-geometry-01.jpg',
+      },
+      {
+        src: '/img/projects/interios/interior-geometry/interior-geometry-02.jpg',
+      },
+      {
+        src: '/img/projects/interios/interior-geometry/interior-geometry-03.jpg',
+      },
+      {
+        src: '/img/projects/interios/interior-geometry/interior-geometry-04.jpg',
+      },
+      {
+        src: '/img/projects/interios/interior-geometry/interior-geometry-05.jpg',
+      },
+      {
+        src: '/img/projects/interios/interior-geometry/interior-geometry-06.jpg',
+      },
+      {
+        src: '/img/projects/interios/interior-geometry/interior-geometry-07.jpg',
         size: 'wide',
       },
       {
-        src: '/img/projects/project-4/photo-moto-2.jpg',
+        src: '/img/projects/interios/interior-geometry/interior-geometry-08.jpg',
         size: 'wide',
+      },
+    ],
+  },
+  {
+    id: 'minimalist-living',
+    title: 'Minimalist living',
+    category: 'interios',
+    description: 'faishon studio photo',
+    coverImage:
+      '/img/projects/interios/minimalist-living/minimalist-living-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/interios/minimalist-living/minimalist-living-01.jpg',
+      },
+      {
+        src: '/img/projects/interios/minimalist-living/minimalist-living-02.jpg',
+      },
+      {
+        src: '/img/projects/interios/minimalist-living/minimalist-living-03.jpg',
+      },
+      {
+        src: '/img/projects/interios/minimalist-living/minimalist-living-04.jpg',
       },
     ],
   },

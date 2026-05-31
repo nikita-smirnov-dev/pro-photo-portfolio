@@ -207,4 +207,77 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 'glacier-landscape',
+    title: 'Glacier landscape',
+    category: 'nature',
+    description: 'faishon studio photo',
+    coverImage:
+      '/img/projects/nature/glacier-landscape/glacier-landscape-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/nature/glacier-landscape/glacier-landscape-01.jpg',
+      },
+      {
+        src: '/img/projects/nature/glacier-landscape/glacier-landscape-02.jpg',
+      },
+      {
+        src: '/img/projects/nature/glacier-landscape/glacier-landscape-03.jpg',
+      },
+    ],
+  },
+  {
+    id: 'night-sky',
+    title: 'Night sky',
+    category: 'nature',
+    description: 'faishon studio photo',
+    coverImage: '/img/projects/nature/night-sky/night-sky-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/nature/night-sky/night-sky-01.jpg',
+      },
+      {
+        src: '/img/projects/nature/night-sky/night-sky-02.jpg',
+      },
+      {
+        src: '/img/projects/nature/night-sky/night-sky-03.jpg',
+      },
+      {
+        src: '/img/projects/nature/night-sky/night-sky-04.jpg',
+      },
+      {
+        src: '/img/projects/nature/night-sky/night-sky-05.jpg',
+      },
+      {
+        src: '/img/projects/nature/night-sky/night-sky-06.jpg',
+      },
+    ],
+  },
+  {
+    id: 'storm-clouds',
+    title: 'Storm clouds',
+    category: 'nature',
+    description: 'faishon studio photo',
+    coverImage: '/img/projects/nature/storm-clouds/storm-clouds-cover.jpg',
+    photos: [
+      {
+        src: '/img/projects/nature/storm-clouds/storm-clouds-02.jpg',
+      },
+      {
+        src: '/img/projects/nature/storm-clouds/storm-clouds-03.jpg',
+      },
+      {
+        src: '/img/projects/nature/storm-clouds/storm-clouds-04.jpg',
+      },
+      {
+        src: '/img/projects/nature/storm-clouds/storm-clouds-05.jpg',
+      },
+      {
+        src: '/img/projects/nature/storm-clouds/storm-clouds-06.jpg',
+      },
+      {
+        src: '/img/projects/nature/storm-clouds/storm-clouds-07.jpg',
+      },
+    ],
+  },
 ];

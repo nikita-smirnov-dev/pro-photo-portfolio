@@ -7,7 +7,7 @@ export interface ProjectPhoto {
 export interface Project {
   id: string;
   title: string;
-  category: 'architecture' | 'automotive' | 'interios';
+  category: 'architecture' | 'automotive' | 'interios' | 'nature';
   description: string;
   coverImage: string;
   photos?: ProjectPhoto[];

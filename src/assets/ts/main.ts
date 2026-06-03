@@ -3,6 +3,7 @@ import { initFancybox } from './components/project-gallery-fancy';
 import { initBackToTop } from './components/back-to-top';
 import { initPageOverlay } from './components/page-overlay';
 import { initBurgerMenu } from './components/burger';
+import { initGoBack } from './components/go-back';
 
 initPageOverlay();
 
@@ -11,4 +12,5 @@ document.addEventListener('astro:page-load', () => {
   initFancybox();
   initBackToTop();
   initBurgerMenu();
+  initGoBack();
 });

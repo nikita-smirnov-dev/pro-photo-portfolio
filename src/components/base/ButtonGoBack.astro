@@ -1,10 +1,16 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
 <div class="go-back">
   <a href="#" class="go-back__link" data-go-back>
     <Icon name="arrow-back" class="go-back__icon" aria-hidden="true" />
-    Back
+    {title}
   </a>
 </div>

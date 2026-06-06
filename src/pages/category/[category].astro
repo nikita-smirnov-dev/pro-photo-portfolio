@@ -4,6 +4,7 @@ import Layout from '@layouts/BaseLayout.astro';
 import { projects } from '@data/projects';
 import { authorInfo } from '@data/author';
 import ProjectCard from '@components/projects/ProjectCard.astro';
+import ButtonGoBack from '@components/base/ButtonGoBack.astro';
 
 export const getStaticPaths = (() => {
   const allCategories = [
@@ -32,6 +33,7 @@ const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
 <Layout title={`${categoryName} - ${authorInfo.name}`}>
   <section class="projects section-offset">
     <div class="container projects__inner">
+      <ButtonGoBack title="All projects" />
       <h1 class="visually-hidden">
         {categoryName} — Портфолио фотостудии {authorInfo.name}
       </h1>

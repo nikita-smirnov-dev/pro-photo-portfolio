@@ -3,6 +3,10 @@
 .projects {
   padding-top: calc(var(--header-height) + var(--spacing-32));
 
+  @include small-tablet {
+    padding-top: calc(var(--header-height) + var(--spacing-20));
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

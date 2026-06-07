@@ -15,15 +15,20 @@ interface Props {
 }
 
 const { class: extraClass = '', activeCategory } = Astro.props;
-const pathName = Astro.url.pathname;
+const rawPathName = Astro.url.pathname;
+
+const pathName = rawPathName === '/' ? '/' : rawPathName.replace(/\/$/, '');
 ---
 
 <nav class=`nav ${extraClass}` data-nav>
   <ul class="nav__list list-reset">
     {
       navItems.map((item) => {
+        const cleanHref =
+          item.href === '/' ? '/' : item.href.replace(/\/$/, '');
         const isActive =
-          pathName === item.href ||
+          pathName === cleanHref ||
+          pathName.startsWith(cleanHref + '/') ||
           activeCategory?.toLowerCase() === item.title.toLowerCase();
 
         return (

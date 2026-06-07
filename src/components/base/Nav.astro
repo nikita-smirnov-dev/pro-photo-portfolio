@@ -1,4 +1,6 @@
 ---
+import { isRenderTemplateResult } from 'astro/runtime/server/render/astro/render-template.js';
+
 const navItems = [
   { title: 'Architecture', href: '/category/architecture' },
   { title: 'Automotive', href: '/category/automotive' },
@@ -10,18 +12,28 @@ const navItems = [
 ];
 
 const { class: extraClass = '' } = Astro.props;
+const pathName = Astro.url.pathname;
+console.log('Name:', pathName);
 ---
 
 <nav class=`nav ${extraClass}` data-nav>
   <ul class="nav__list list-reset">
     {
-      navItems.map((item) => (
-        <li class="nav__item">
-          <a href={item.href} class="nav__link" data-nav-link>
-            {item.title}
-          </a>
-        </li>
-      ))
+      navItems.map((item) => {
+        const isActive = pathName === item.href;
+
+        return (
+          <li class="nav__item">
+            <a
+              href={item.href}
+              class:list={['nav__link', { 'nav__link--active': isActive }]}
+              data-nav-link
+            >
+              {item.title}
+            </a>
+          </li>
+        );
+      })
     }
   </ul>
 </nav>

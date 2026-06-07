@@ -41,6 +41,10 @@
       color: var(--accent-color);
     }
 
+    &--active {
+      color: var(--accent-color);
+    }
+
     @include mobile {
       font-size: var(--font-size-16);
     }

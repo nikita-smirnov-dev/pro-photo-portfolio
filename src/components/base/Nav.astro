@@ -1,6 +1,4 @@
 ---
-import { isRenderTemplateResult } from 'astro/runtime/server/render/astro/render-template.js';
-
 const navItems = [
   { title: 'Architecture', href: '/category/architecture' },
   { title: 'Automotive', href: '/category/automotive' },
@@ -11,16 +9,22 @@ const navItems = [
   { title: 'Contact', href: '/contact' },
 ];
 
-const { class: extraClass = '' } = Astro.props;
+interface Props {
+  class: string;
+  activeCategory?: string;
+}
+
+const { class: extraClass = '', activeCategory } = Astro.props;
 const pathName = Astro.url.pathname;
-console.log('Name:', pathName);
 ---
 
 <nav class=`nav ${extraClass}` data-nav>
   <ul class="nav__list list-reset">
     {
       navItems.map((item) => {
-        const isActive = pathName === item.href;
+        const isActive =
+          pathName === item.href ||
+          activeCategory?.toLowerCase() === item.title.toLowerCase();
 
         return (
           <li class="nav__item">

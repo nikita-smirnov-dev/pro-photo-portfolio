@@ -22,7 +22,10 @@ const currentProject = projects.find((p) => p.id.toLowerCase() === id);
 const nameProject = id.charAt(0).toUpperCase() + id.slice(1);
 ---
 
-<Layout title={`${nameProject} - ${authorInfo.name}`}>
+<Layout
+  title={`${nameProject} - ${authorInfo.name}`}
+  activeCategory={currentProject?.category}
+>
   <section class="projects-work section-offset">
     <div class="container projects-work__inner">
       <ButtonGoBack title="Back" />

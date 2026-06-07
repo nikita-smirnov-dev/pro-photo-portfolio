@@ -2,12 +2,18 @@
 import Burger from './Burger.astro';
 import Logo from './Logo.astro';
 import Nav from './Nav.astro';
+
+interface Props {
+  activeCategory?: string;
+}
+
+const { activeCategory } = Astro.props;
 ---
 
 <header class="header">
   <div class="container header__inner">
     <Logo class="header__logo" />
     <Burger />
-    <Nav class="header__nav" />
+    <Nav class="header__nav" activeCategory={activeCategory} />
   </div>
 </header>

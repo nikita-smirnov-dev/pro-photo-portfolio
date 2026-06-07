@@ -4,15 +4,24 @@ import Footer from '@components/base/Footer.astro';
 import Head from '@components/base/Head.astro';
 import Header from '@components/base/Header.astro';
 
-const { title = 'Название сайта', description = 'Описание сайта' } =
-  Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  activeCategory?: string;
+}
+
+const {
+  title = 'Название сайта',
+  description = 'Описание сайта',
+  activeCategory,
+} = Astro.props;
 ---
 
 <html lang="en" class="page">
   <Head title={title} description={description} />
   <body class="page__body">
     <Loader />
-    <Header />
+    <Header activeCategory={activeCategory} />
     <main class="main">
       <slot />
     </main>

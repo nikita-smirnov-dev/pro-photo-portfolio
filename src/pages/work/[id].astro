@@ -30,7 +30,7 @@ const nameProject = id.charAt(0).toUpperCase() + id.slice(1);
     <div class="container projects-work__inner">
       <ButtonGoBack title="Back" />
       <h1 class="projects-work__title visually-hidden">
-        {nameProject} — фотостудия {authorInfo.name}
+        {nameProject} — Photo studio {authorInfo.name}
       </h1>
       <ul class="projects-work__list list-reset">
         {currentProject && <ProjectGallery project={currentProject} />}
